@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            .togglediv
+{
+    display: none;
+}
+
+.emplyrdiv
+{
+    position: relative;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.emplyrfielddiv
+{
+  //  position: relative;
+   // top: 10px;
+   // left: 150px;
+   // padding: 5px;
+}
+.yrsofexp
+{
+    position: relative;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.yrsofexpfielddiv
+{
+    position: relative;
+    top: 10px;
+    left: 150px;
+    padding: 5px;
+}
+        </style>
+    <style>
+        aster{
+               color:red;
+               font-size:10px;
+               vertical-align: super;
+               font-size: smaller;
+            
+            }
+            h1{
+                font-style: italic;
+                font-size: 60px;
+                color: red;
+                
+            }
+    </style>
+    <style type="text/css">
+
+  input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+</style>
+<script>
+    function phonenumber(inputtxt)
+{
+  var phoneno = /^\d{10}$/;
+  if(inputtxt.value.match(phoneno))
+  {
+      return true;
+  }
+  else
+  {
+     alert("Not a valid Phone Number");
+     return false;
+  }
+  }
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('input[type="checkbox"]').click(function(){
+                        if($(this).attr("value")==="chk"){
+                            $(".togglediv").toggle(3000);
+                        };
+                    });
+            });
+        </script>
+</head>
+
+<body style=" background-image: url(background1.jpg)">
+<div class="container">
+
+<div class="jumbotron" >
+    <center> <h1>ABC Inc.</h1> 
+        <p>Find Better!</p> </center>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+      <form name="form1">
+    
+                <pre>
+    First Name<aster>*</aster> <input type="text" maxlength="20" placeholder="First Name" required><br>
+    Last Name<aster>*</aster>  <input type="text" maxlength="20" name="last_name" placeholder="Last Name" required><br>
+    Email<aster>*</aster>      <input type="email" name="email" placeholder="email id" required><br>
+    Phone<aster>*</aster>      <input type="text" placeholder="Mobile Number" name="phn" required><br>
+    Address<aster>*</aster>    <input type="text" name="addr" maxlength="30" placeholder="Address" required><br>
+    City<aster>*</aster>       <input type="text" name="city" placeholder="City" required><br>
+    State<aster>*</aster>      <input type="text" name="state" placeholder="State" required><br>
+    Zip<aster>*</aster>        <input type="text" name="zip" placeholder="Zip Code" required><br>
+    Country<aster>*</aster>    <select name="country">
+                    <option name="IND" selected>India</option>
+                    <option name="USA">United States of America</option>
+                    <option name="AUS">Australia</option>
+                    <option name="SIN">Singapore</option>
+                    </select><br>
+    Education Level<aster>*</aster> <select name="edulevel">
+                <option>Graduate</option>
+                <option>Intermediate</option>
+                <option>Post-Graduate</option>
+    </select><br>
+    Education Type<aster>*</aster>  <select>
+        <option>Computer Science</option>
+        <option>Mechanical</option>
+        <option>Electronics</option>
+        <option>Civil</option>
+    </select>        
+    Resume<aster>*</aster>          <input type="file" name="Resume" required>
+    Cover letter  <textarea cols="20" rows="10" placeholder="optional"></textarea><br>
+    Are you employed? <input type="checkbox" name="">No</input>
+                      <input type="checkbox" id="chkbox" value="chk"/>Yes
+ <div class="togglediv">
+  <!--  <div class="emplyrdiv">
+    <div class="emplyrfielddiv"> -->
+    Current Employer <input type="text" id="emplyrtb" placeholder="Current Employer" autocomplete="on" autofocus/>
+                            
+    Years Of Experience <input type="number" id="yrsofexptb" placeholder="Years of Experience" autocomplete="on" autofocus/>
+                            </div>
+    Jobs you want to apply to:          <select name="app" multiple>
+                     <option name="1">Product Developer</option>
+         <option name="2">Software Tester</option>
+         <option name="3">HR Manager</option>
+         <option name="4">Production Engineer</option>
+         <option value="5">Software Trainer</option>
+         <option name="6">Project Trainee</option>
+         </select><br>
+                      <input type="Submit" onclick="phonenumber(document.form1.phn)">
+      </pre>
+           </form>
+  </div>
+  <div class="col-md-4">
+    
+  </div>
+</div>
+
+</div>
+</body>
+</html>

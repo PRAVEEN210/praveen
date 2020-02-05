@@ -1,0 +1,19 @@
+SQL> desc student1;
+ Name                                                                                                      Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ STU_NAME                                                                                                  NOT NULL VARCHAR2(10)
+
+ STU_ID                                                                                                    NOT NULL NUMBER(10)
+
+ STU_MARKS                                                                                                 NOT NULL NUMBER(10)
+
+ STU_ADDRESS                                                                                               NOT NULL VARCHAR2(10)
+
+ STU_MOBILE                                                                                                NOT NULL NUMBER(10)
+
+ STU_EMAIL                                                                                                 NOT NULL VARCHAR2(10)
+
+ STU_DOB  
+
+                                                                                                 NOT NULL DATE
+ PASSWORD                                                                                                           VARCHAR2(10)

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        aster{
+               color:red;
+               font-size:10px;
+               vertical-align: super;
+               font-size: smaller;
+            
+            }
+            h1{
+                font-style: italic;
+                font-size: 60px;
+                color: red;
+                
+            }
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body style="background-image: url(background1.jpg)">
+<div class="container">
+
+<div class="jumbotron" >
+    <center> <h1>ABC Inc.</h1> 
+        <p>Find Better!</p> </center>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    
+  </div>
+  <div class="col-md-4">
+    <form action="action_page.php">
+        <pre>
+<br><br><br>
+     Job Title<aster>*</aster>    <input type="text" name="title" required> </input><br><br>
+     Type<aster>*</aster>         <select name="type" required>
+         <option name="1">Product Developer</option>
+         <option name="2">Software Tester</option>
+         <option name="3">HR Manager</option>
+         <option name="4">Production Engineer</option>
+         <option value="5">Software Trainer</option>
+         <option name="6">Project Trainee</option>
+         </select><br>
+     Department<aster>*</aster>   <select name="dept" required>
+         <option name="CSE">Computer Science</option>
+         <option name="ECE" >Electronics</option>
+         <option name="MECH">Mechanical Engineering</option>
+         <option name="CIVIL">Civil Engineering</option>
+         <option name="IT">Information Technology</option></select>
+                       
+     Country<aster>*</aster>      <select name="country">
+                    <option name="IND" selected>India</option>
+                    <option name="USA">United States of America</option>
+                    <option name="AUS">Australia</option>
+                    <option name="SIN">Singapore</option>
+</select><br><br>
+     Description<aster>*</aster>  <textarea name="desc" rows="10" cols="20"></textarea><br><br>
+     Opening Date<aster>*</aster> <input type="date"></input><br><br>
+                        <input type="Submit"></input>
+            
+        </pre>
+            
+        </form>
+  </div>
+  <div class="col-md-4">
+    
+  </div>
+</div>
+
+</div>
+</body>
+</html>

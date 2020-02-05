@@ -1,0 +1,125 @@
+Project Assignement:
+--------------------
+Develop a Jobs Management application for company "ABC Limited".
+It will be a Web application with following pages:
+
+ - Create job openings (form) 
+ - List Job openings (report) 
+ - Apply for Job (form) 
+ - Applicants List (Report)
+
+Pre-requisit:  Netbeans
+
+***********************************
+Task 1: Database design
+
+create required tables, indexes, sequences.
+
+Master tables:  create with appropriate fields and fill with data
+
+- regions (continents): region_id (pk) (EU, NA etc...) , region_name (Europe, North America..)
+
+- countries: country_cd (pk), country_name, region_id (fk)
+
+- departments: dept_id (pk), dept_name
+
+- job_types: job_type_cd (pk), job_type_name (IT manager, HR manager, IT Developer, HR Assistent, Sales manager...)
+
+- job_status_codes: job_status_cd (pk), status_desc (Open, Closed, Pending)
+
+- appl_status_codes: Appl_status_cd (pk), status_desc ( pending, rejected, passed written test, passed interview 1, short listed, selected..)
+
+- education_levels: edu_level_cd (pk), edu_level_name (highschool, graduate, post graduate, doctorate/phd)
+
+- education_type: edu_type_cd (pk), edu_type_name (civil engg, computer eng, business admin, economics, general...)
+
+Transaction tables (to be filled through form data entry):
+
+- jobs:  job_id (pk), job_title, job_desc (4000 characters), job_type_cd (fk1), dept_id (fk2), job_status_cd (fk3), 
+         country_cd (fk4), date_opened, date_closed
+
+- applicants: appl_id, first_name, last_name, email, phone_num, address, city, state, zip, country_cd (fk1),
+              appl_status_cd (fk2), edu_level_cd (fk3), edu_type_cd (fk4), resume_file_name, 
+              cover_letter_text, date_applied, employed_flag, current_employer_name, years_of_exp...
+
+- applicant_jobs: appl_id (pk, fk1), job_id (pk, fk2), appl_status_cd (fk3), date_applied, 
+                  written_test_date, interview1_date, interview2_date
+
+Notes: 
+1. for all the above tables include two standard columns (last_update_date, last_updated_by) 
+2. use sequences for unique key values of job_id, appl_id
+
+***************************************
+
+Task 2:
+
+Create HTML/javascript mockup (prototype) pages for job openings form and apply for job form 
+
+2.1. Job openings form (create_job.html):
+page title: Enter Job Data
+
+fields:
+ 
+   title: text field*
+   type: drop down (select)*
+   department: drop down (select)*  
+   country: drop down (select)*
+   description: text area*
+   opening date: date field (fill with current date)*
+
+   [submit] button
+
+* = required fields
+   javascript validations: 
+     validate that required fields are not blank when submit is clicked
+     validate that date value is valid and not greated than current date
+
+
+2.2. Apply for Jobs form (apply_job.html):
+
+page title: Apply for Jobs
+
+fields:
+
+
+- applicants: appl_id, first_name, last_name, email, phone_num, address, city, state, zip, country_cd (fk1),
+              appl_status_cd (fk2), edu_level_cd (fk3), edu_type_cd (fk4), resume_file_name, 
+              cover_letter_text, date_applied, employed_flag, current_employer_name, years_of_exp..
+ 
+   first name: text field*
+   last name: text field*
+   email: text field*
+   phone: text field*
+   address: text field* 
+   city: text field*
+   state: text field*
+   zip: text field*  - integer
+   country: drop down (select)*
+   education level: drop down (select)*
+   education type:  drop down (select)*   
+   resume:  file upload type * 
+   cover letter: text area (optional)
+   are you employed?: checkbox
+   if employed (show only when the above checkbox is checked),
+      current employer: text field
+      years of experience: numeric 
+   jobs you want to apply: multi-select (open jobs list)
+     
+   [submit] button
+
+* = required fields
+   javascript validations: 
+     validate that required fields are not blank when submit is clicked
+     validate that numberic values are valid
+     if possible add validations for phone number and email
+
+Note: Use CSS stylesheet file to define classes for various texts (headers, field names, hints..) and input fields
+
+*********************************
+
+more later....
+
+
+
+
+
